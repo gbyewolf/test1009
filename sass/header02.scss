@@ -1,0 +1,79 @@
+$color1 : #FFFAF4;
+$color2 :#5f9ea0;
+$color3 : #577c8a;
+$color4 : #465d4c;
+$color5 : #865454;
+$color6 : #54383b;
+$color7 : #787878;
+$color8 : #bda79e;
+
+body{
+    background-color: $color1;
+}
+
+header.common{
+    position: relative;
+    height: 160px;
+    nav {
+        position: absolute;
+        top:50%;
+        a{
+        text-decoration: none;
+        color: $color6;
+        font-size: 25px;
+        white-space: nowrap;
+        transform: translateY(-50%);
+        padding: 15px;
+        }
+        .href01{
+            position: absolute;
+            left: 15vw;
+            &::before{
+                content: '';
+                width: 40vw;
+                height: 2px;
+                background: #CAC3BB;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0vw;
+            }
+            &::after{
+                content: '';
+                height: 2px;
+                background: #CAC3BB;
+                display: block;
+            }
+        }
+        .href02{
+            position: absolute;
+            left: 25vw;
+        }
+        .href03{
+            position: absolute;
+            left: 60vw;
+        }
+        .href04{
+            position: absolute;
+            left: 75vw;
+        }
+    }
+    .logo{
+        position: absolute;
+        left:50%;
+        transform: translateX(-50%);
+    }
+    .icon{
+        position: absolute;
+        top: 50%;
+        left: 85vw;
+        transform: translateY(-50%);
+        display: flex;
+        a{
+            margin-right: 10px;
+        }
+        .ham{
+            display: none;
+        }
+    }
+}

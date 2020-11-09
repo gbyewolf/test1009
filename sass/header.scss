@@ -1,0 +1,104 @@
+$color1 : #FFFAF4;
+$color2 :#5f9ea0;
+$color3 : #577c8a;
+$color4 : #465d4c;
+$color5 : #865454;
+$color6 : #54383b;
+$color7 : #787878;
+$color8 : #bda79e;
+
+body{
+    background-color: $color1;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+        text-decoration: none;
+        color: $color6;
+        // margin-left: 50px;
+        font-size: 25px;
+    }
+    .nav1{
+        margin-left: 8vw;
+        text-align: center;
+        flex:1;
+        position: relative;
+        padding: 15px;
+        a{
+            margin-left: 20px;
+        }
+        &::before{
+            content: '';
+            width: 80%;
+            height: 2px;
+            background: #CAC3BB;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &::after{
+            content: '';
+            width: 80%;
+            height: 2px;
+            background: #CAC3BB;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    img{
+        max-width: 100%;
+    }
+    .nav2{
+        margin-right: 8vw;
+        text-align: center;
+        flex:1;
+        position: relative;
+        padding: 15px;
+        display: flex;
+        a{
+            margin-left: 20px;
+        }
+        &::before{
+            content: '';
+            width: 80%;
+            height: 2px;
+            background: #CAC3BB;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        &::after{
+            content: '';
+            width: 80%;
+            height: 2px;
+            background: #CAC3BB;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    .icon{
+        position: absolute;
+        left: 85vw;
+    }
+}
+
+
+@media (max-width:768px){
+    header{
+        .nav1{
+        display: none;
+        }
+        .nav2{
+        display: none;
+        }
+    }
+}
