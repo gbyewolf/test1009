@@ -22,16 +22,18 @@ $pu:8px;
 $lh:30px;
 
 @mixin rwds($breakpoint) {
-    @if $breakpoint == 360 {
+    @if $breakpoint==360 {
         @media (min-width: 360px) {
             @content;
         }
     }
+
     @else if $breakpoint=='aaa' {
         @media (min-width: 576px) {
             @content;
         }
     }
+
     // @else if $breakpoint=="768" {
     //     @media (min-width: 768px) {
     //         $h1:30px;
@@ -62,65 +64,80 @@ $lh:30px;
 }
 
 
-header.common{
-    *{
-    box-sizing: border-box;
+header.common {
+    * {
+        box-sizing: border-box;
     }
+
     box-sizing: border-box;
     position: relative;
     height: 80px;
     padding: 10px;
-    a{
+
+    a {
         text-decoration: none;
         pointer-events: none;
     }
-    img{
+
+    img {
         max-height: 100%;
     }
-    .logo{
+
+    .logo {
         height: 60px;
     }
-    .nav1{
+
+    nav {}
+
+    .nav1 {
         display: none;
     }
-    .nav2{
+
+    .nav2 {
         display: none;
     }
-    .icon{
+
+    .icon {
         position: absolute;
         right: 20px;
-        top:50%;
+        top: 50%;
         transform: translateY(-50%);
         display: flex;
-        a{
+
+        a {
             height: 20px;
             margin-left: 10px;
         }
-        .ham  {
-        position: relative;
-        span{
-            background: $c_font_strong;
-            display: block;
-            width: 20px;
-            height: 2px;
-            &:nth-child(1){
-                margin-top: 2px;
-                transform-origin: top right;
-                // transform: rotateZ(-45deg) translate(-3px,-3px);
+
+        .ham {
+            position: relative;
+
+            span {
+                background: $c_font_strong;
+                display: block;
+                width: 20px;
+                height: 2px;
+
+                &:nth-child(1) {
+                    margin-top: 2px;
+                    transform-origin: top right;
+                    // transform: rotateZ(-45deg) translate(-3px,-3px);
+                }
+
+                &:nth-child(2) {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    // display: none;
+                }
+
+                &:nth-child(3) {
+                    position: absolute;
+                    bottom: 2px;
+                    transform-origin: top right;
+                    // transform: rotateZ(45deg) translate(-1px,2px);
+                }
             }
-            &:nth-child(2){
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                // display: none;
-            }
-            &:nth-child(3){
-                position: absolute;
-                bottom: 2px;
-                transform-origin: top right;
-                // transform: rotateZ(45deg) translate(-1px,2px);
-            }
-        }
         }
     }
 }
