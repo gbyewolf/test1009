@@ -1,0 +1,49 @@
+//color
+
+$c_background : #FFFAF4;
+$c_strong_blue :#5f9ea0;
+$c_strong_green : #465d4c;
+$c_secondary_blue : #577c8a;
+$c_secondary_red : #865454;
+$c_font_strong : #54383b;
+$c_font_middle : #787878;
+$c_font_light : #bda79e;
+$c_footer :#CAC3BB;
+
+// color shorthand
+$cbg : #FFFAF4;
+$csb :#5f9ea0;
+$csg : #465d4c;
+$csdb : #577c8a;
+$csdr : #865454;
+$cfs : #54383b;
+$cfm : #787878;
+$cfl : #bda79e;
+$cf :#CAC3BB;
+
+//fontSize
+
+
+
+
+@mixin marginAuto($bgc , $fontColor:red){
+    margin: 0 auto;
+    background-color: $bgc;
+    padding: 10px;
+    color: $fontColor;
+};
+
+
+ //按鈕
+
+@mixin btns($w , $bgc , $borderColor , $bdr:null){
+    padding:10px $w;
+    background-color: $bgc;
+    cursor: pointer;
+    border: 1px solid $borderColor;
+    text-align: center;
+    border-radius: $bdr;
+    &:hover {
+        background-color: darken($bgc ,5);
+    }
+}

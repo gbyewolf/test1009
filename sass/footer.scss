@@ -1,0 +1,21 @@
+//color
+$c_background : #FFFAF4;
+$c_strong_blue :#5f9ea0;
+$c_strong_green : #465d4c;
+$c_secondary_blue : #577c8a;
+$c_secondary_red : #865454;
+$c_font_strong : #54383b;
+$c_font_middle : #787878;
+$c_font_light : #bda79e;
+$c_footer :#CAC3BB;
+
+
+footer{
+    .logo{
+        height: 60px;
+    }
+    img{
+        max-height: 100%;
+        filter: blur(1px);
+    }
+}

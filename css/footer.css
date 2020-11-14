@@ -1,0 +1,9 @@
+footer .logo {
+  height: 60px;
+}
+
+footer img {
+  max-height: 100%;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+}
