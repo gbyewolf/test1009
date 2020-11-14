@@ -11,133 +11,152 @@ $c_font_middle : #787878;
 $c_font_light : #bda79e;
 $c_footer :#CAC3BB;
 
-$fs:10px;
-
-$h1:20px;
-$h2:15px;
-$h3:14px;
-$p:12px;
-$pu:8px;
-
-$lh:30px;
-
-@mixin rwds($breakpoint) {
-    @if $breakpoint==360 {
-        @media (min-width: 360px) {
-            @content;
-        }
-    }
-
-    @else if $breakpoint=='aaa' {
-        @media (min-width: 576px) {
-            @content;
-        }
-    }
-
-    // @else if $breakpoint=="768" {
-    //     @media (min-width: 768px) {
-    //         $h1:30px;
-    //         $h2:22px;
-    //         $h3:20px;
-    //     }
-    // }
-    // @else if $breakpoint=="992" {
-    //     @media (min-width: 992px ) {
-    //         $h1:40px;
-    //         $h2:30px;
-    //         $h3:25px;
-    //         $p:24px;
-    //         $pu:16px;
-    //         $lh:60px;
-    //     }
-    // }
-    // @else if $breakpoint=="1200" {
-    //     @media (min-width: 1200px ) {
-    //         $h1:40px;
-    //         $h2:30px;
-    //         $h3:25px;
-    //         $p:24px;
-    //         $pu:16px;
-    //         $lh:60px;
-    //     }
-    // }
-}
-
-
 header.common {
     * {
         box-sizing: border-box;
+        font-size: $p;
     }
-
     box-sizing: border-box;
     position: relative;
     height: 80px;
     padding: 10px;
-
     a {
         text-decoration: none;
-        pointer-events: none;
+        // pointer-events: none;
     }
-
     img {
         max-height: 100%;
     }
-
     .logo {
         height: 60px;
     }
-
-    nav {}
-
-    .nav1 {
+    nav {
+        position: fixed;
+        right: 0;
+        text-align: right;
         display: none;
+        a {
+            display: block;
+            margin-bottom: 2px;
+            color: $c_font_strong;
+            font-size: $h1;
+        }
     }
-
-    .nav2 {
-        display: none;
-    }
-
     .icon {
         position: absolute;
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
         display: flex;
-
         a {
             height: 20px;
             margin-left: 10px;
         }
-
         .ham {
             position: relative;
-
             span {
                 background: $c_font_strong;
                 display: block;
                 width: 20px;
                 height: 2px;
-
                 &:nth-child(1) {
                     margin-top: 2px;
                     transform-origin: top right;
-                    // transform: rotateZ(-45deg) translate(-3px,-3px);
+                    transition: all .5s;
                 }
-
                 &:nth-child(2) {
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    // display: none;
+                    &.-none{
+                        display: none;
+                    }
                 }
-
                 &:nth-child(3) {
                     position: absolute;
                     bottom: 2px;
                     transform-origin: top right;
-                    // transform: rotateZ(45deg) translate(-1px,2px);
+                    transition: all .5s;
                 }
             }
+        }
+    }
+}
+
+.-hamR{
+    transform: rotateZ(-45deg) translate(-3px,-3px);
+}
+.-hamL{
+    transform: rotateZ(45deg) translate(-1px,2px);
+}
+
+@include rwd(360){
+    header.common{
+        nav a{
+            font-size: 2*$fs;
+        }
+    }
+}
+@include rwd(576){
+    header.common{
+        nav a{
+            font-size: 3*$fs;
+        }
+    }
+}
+@include rwd(768){
+    header.common{
+        display: flex;
+        justify-content: center;
+        height: 100px;
+        .logo{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100px;
+        }
+        nav {
+            // display: block !important;
+            position: static;
+            display: flex !important;
+            width: 100vw;
+            text-align: center;
+            align-items: center;
+            a{
+                font-size: 3*$fs;
+                display: inline-block;
+            }
+            .nav2{
+                flex: 1;
+                a:nth-child(2){
+                    margin-left: 15px;
+                }
+            }
+            .nav1{
+                flex: 1;
+                a:nth-child(1){
+                    margin-right: 30px;
+                }
+            }
+        }
+        .icon{
+            .ham{
+                display: none;
+            }
+        }
+    }
+}
+@include rwd(992){
+    header.common{
+        nav a{
+            font-size: 4*$fs;
+        }
+    }
+}
+@include rwd(1200){
+    header.common{
+        nav a{
+            font-size: 4*$fs;
         }
     }
 }
