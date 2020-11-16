@@ -19,7 +19,7 @@ header.common {
     box-sizing: border-box;
     position: relative;
     height: 80px;
-    padding: 10px;
+    padding: 10px 0;
     a {
         text-decoration: none;
         // pointer-events: none;
@@ -39,12 +39,12 @@ header.common {
             display: block;
             margin-bottom: 2px;
             color: $c_font_strong;
-            font-size: $h1;
+            font-size: $h2;
         }
     }
     .icon {
         position: absolute;
-        right: 20px;
+        right: 2%;
         top: 50%;
         transform: translateY(-50%);
         display: flex;
@@ -127,15 +127,62 @@ header.common {
                 display: inline-block;
             }
             .nav2{
+                text-align: left;
                 flex: 1;
+                padding-left:8vw;
+                position: relative;
                 a:nth-child(2){
                     margin-left: 15px;
                 }
+                &:before{
+                    content: '';
+                    display: block;
+                    width: 70%;
+                    height: 2px;
+                    background: #CAC3BB;
+                    position: absolute;
+                    top: -10px;
+                    left: 10%;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 70%;
+                    height: 2px;
+                    background: #CAC3BB;
+                    position: absolute;
+                    bottom: -10px;
+                    right: 10%;
+                }
             }
             .nav1{
+                position: relative;
+                text-align: right;
                 flex: 1;
-                a:nth-child(1){
-                    margin-right: 30px;
+                padding-right: 8vw;
+                box-sizing: border-box;
+                a:nth-child(2){
+                    margin-left: 15px;
+                }
+                &:before{
+                    content: '';
+                    display: block;
+                    width: 70%;
+                    height: 2px;
+                    background: #CAC3BB;
+                    position: absolute;
+                    top: -10px;
+                    left: 10%;
+                }
+                &::after{
+                    content: '';
+                    display: block;
+                    width: 70%;
+                    height: 2px;
+                    background: #CAC3BB;
+                    position: absolute;
+                    bottom: -10px;
+                    right: 10%;
                 }
             }
         }
@@ -155,8 +202,12 @@ header.common {
 }
 @include rwd(1200){
     header.common{
+        height: 160px;
         nav a{
             font-size: 4*$fs;
         }
+        .logo{
+        height: 160px;
+    }
     }
 }
