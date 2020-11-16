@@ -147,3 +147,41 @@ $lh:30px;
         }
     }
 }
+
+@mixin rwdm($screenSize) {
+    @if $screenSize==1700 {
+        @media (max-width: 1700px) {
+            @content;
+        }
+    }
+    @else if $screenSize==1500 {
+        @media (max-width: 1500px) {
+            @content;
+        }
+    }
+    @else if $screenSize==1200 {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $screenSize==992 {
+        @media (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $screenSize==768 {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $screenSize==576 {
+        @media (max-width: 576px) {
+            @content;
+        }
+    }
+    @else if $screenSize==360 {
+        @media (max-width: 360px) {
+            @content;
+        }
+    }
+}
