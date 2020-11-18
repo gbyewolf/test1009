@@ -17,8 +17,12 @@
     <div id="JH">
         <nav class="topNav">
             <ul>
-                <li>賽制說明</li>
-                <li>人氣票選</li>
+                <li><h3>
+                    賽制說明
+                </h3></li>
+                <li><h3>
+                    人氣票選
+                </h3></li>
                 <li><h1>
                     歷屆冠軍
                 </h1></li>

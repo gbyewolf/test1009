@@ -3,7 +3,7 @@ let $_headerNav = $('header nav');
 let ham = document.querySelector('.ham');
 let hamSpan = document.querySelectorAll('.ham span');
 
-function navNone(evt){
+function navNone(evt) {
     evt.preventDefault();
     hamSpan[0].classList.toggle('-hamR');
     hamSpan[1].classList.toggle('-none');
@@ -13,4 +13,4 @@ function navNone(evt){
     $_headerNav.slideToggle();
 }
 
-ham.addEventListener('click',navNone);
+ham.addEventListener('click', navNone);
