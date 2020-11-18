@@ -1,0 +1,25 @@
+{
+  "name": "test1009",
+  "version": "1.0.0",
+  "description": "1.  test01  ted101@mail.com",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gbyewolf/test1009.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gbyewolf/test1009/issues"
+  },
+  "homepage": "https://github.com/gbyewolf/test1009#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "vinyl-ftp": "^0.6.1"
+  }
+}

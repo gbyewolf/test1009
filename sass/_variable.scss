@@ -148,6 +148,7 @@ $lh:30px;
     }
 }
 
+//@media max-width
 @mixin rwdm($screenSize) {
     @if $screenSize==1700 {
         @media (max-width: 1700px) {
