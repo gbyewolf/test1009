@@ -163,14 +163,10 @@ $lh:30px;
     }
 }
 
-<<<<<<< HEAD
-//@media max-width
-=======
 
 // <===    rwd 從大至小    ===>
 
 //rwd區間函式
->>>>>>> 62e8a64d8fcfe8fc6c36e8f98400af8b6c4eafdf
 @mixin rwdm($screenSize) {
     @if $screenSize==1700 {
         @media (max-width: 1700px) {
